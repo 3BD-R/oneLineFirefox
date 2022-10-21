@@ -28,7 +28,7 @@
 
 /* tracking protection shield icon */
 #tracking-protection-icon-container {
-  /*display: none !important;*/
+  display: none !important;
 }
 
 /* hide containers label only  */
@@ -235,9 +235,12 @@ findbar {
   padding-block: 2px !important;
   background: #111 !important;
 }
-
+.private-browsing-indicator-with-label, .private-browsing-indicator {
+    display: none  !important;
+    
+  }
 /* transition to oneline */
-@media (min-width: 750px) {
+/*  @media (min-width: 750px) {  */
   
   /* move tabs bar over */
   #TabsToolbar {
@@ -246,44 +249,37 @@ findbar {
     /* display: none !important; */
     margin-top: 0vw !important;
     max-height: 34px !important;
+    
   }
   
-/*   #navigator-toolbox:hover  */
   #alltabs-button {
     visibility: visible !important;
     display: block !important;
     margin-right: -2px !important;
     margin-top: -2px !important;
-/*     list-style-image: none !important; */
-    
   }
 
   /* .tabbrowser-tab { background: red !important; visibility: hidden } */
-  .private-browsing-indicator { display: none !important; }
+   #private-browsing-indicator-with-label,
+  .private-browsing-indicator {
+    display: none  !important;
+    visibility: collapse !important;
+    
+  }
   
   /* move entire nav bar  */
   #nav-bar {
     /* margin: -34px 55vw 0 9px !important; */
     /* margin: -34px 55vw 0 0px !important; */
     margin: -35px 36px -2px 0px !important;
+
     max-height: 34px !important;
     min-height: 34px !important;
     /* margin: -2px 0px !important; */
   }
-/*   #navigator-toolbox:hover #nav-bar { margin-right: 36px !important; } */
-  
-/*   #navigator-toolbox:hover #nav-bar[urlbar-exceeds-toolbar-bounds] { margin-right: 0 !important; }  */
-  
-/*   #identity-box { display: none;}
-  #navigator-toolbox:hover #identity-box { display: inline-flex;}
-  
-  #page-action-buttons { display: none; }
-  #navigator-toolbox:hover #page-action-buttons { display: inline-flex;}
-  
+ 
   #urlbar-container { margin: 0px !important; }
   
-  #nav-bar-overflow-button { display:none !important; }
-  #navigator-toolbox:hover #nav-bar-overflow-button { display: block !important; } */
 /*     display: none !important; */
   }
  */
@@ -292,6 +288,19 @@ findbar {
   width:  99.2vw !important;
   margin-left : 50vh !important; } 
   */
- 
+
+  
+  
+/* }  */
 /* end media query */
+
+/*  hide weird space on fullscreen mode  */
+.titlebar-buttonbox-container {
+  visibility: collapse !important;
+}
+/* autohide search baar *
+  #main-window:not([customizing]) #navigator-toolbox:not(:focus-within) {
+    margin-top: -38px;
+  }
+
 
