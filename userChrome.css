@@ -281,8 +281,8 @@ findbar {
   #urlbar-container { margin: 0px !important; }
   
 /*     display: none !important; */
-  }
- */
+  /* } */
+ 
   /*  screen wide search bar  */
   /*   #nav-bar #urlbar[open] {
   width:  99.2vw !important;
