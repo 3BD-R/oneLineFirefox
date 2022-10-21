@@ -293,14 +293,16 @@ findbar {
   
 /* }  */
 /* end media query */
-
 /*  hide weird space on fullscreen mode  */
-.titlebar-buttonbox-container {
-  visibility: collapse !important;
+*      hbox {
+/*   visibility: collapse !important; */
+  display:  none !important;
 }
-/* autohide search baar *
+.titlebar-buttonbox-container,
+.titlebar-button {
+  display:  none !important;
+}
+/* autohide search baar */
   #main-window:not([customizing]) #navigator-toolbox:not(:focus-within) {
     margin-top: -38px;
   }
-
-
