@@ -1,6 +1,6 @@
 :root {
   /* global border radius */
-  --uc-border-radius: 0px !important;
+  --uc-border-radius: 15px !important;
   --arrowpanel-border-radius: var(--uc-border-radius) !important;
   --tab-border-radius: var(--uc-border-radius) !important;
   --toolbarbutton-border-radius: var(--uc-border-radius) !important;
@@ -45,7 +45,7 @@
 #PanelUI-button {
     position: fixed;
     top: 28px;
-    right: 0px;
+    right: 10px;
   background-color: #050505;
 }
 #appMenu-notification-popup {visibility: visible !important;}
@@ -124,6 +124,7 @@ window,
   border-top: none !important;
 /*   box-shadow: none !important; */
 /*   background: transparent !important; */
+
 }
 
 #urlbar-background {
@@ -135,9 +136,11 @@ window,
 #urlbar:not([open]) > #urlbar-background {
   background: transparent !important;
   /*   border-radius:  5px  !important; */
+
 }
 
 /* Sidebar themeing */
+
 #sidebar-splitter {
   border: none !important;
   background-color: #111111 !important;
