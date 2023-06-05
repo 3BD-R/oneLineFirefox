@@ -1,147 +1,146 @@
 :root {
   /* global border radius */
-  --uc-border-radius: 15px !important;
-  --arrowpanel-border-radius: var(--uc-border-radius) !important;
+  --uc-border-radius: 0px !important;
+  --arrowpanel-border-radius: 0px !important;
   --tab-border-radius: var(--uc-border-radius) !important;
   --toolbarbutton-border-radius: var(--uc-border-radius) !important;
+  /*   --toolbar-field-focus-background-color: transparent !important; */
+  /*   --toolbar-field-focus-color: shyblue !important; */
+
 }
 
-#nav-bar { -moz-box-ordinal-group: 1 !important; }
+/* Order the lines */
+#nav-bar {
+  -moz-box-ordinal-group: 1 !important;
+}
 
-#PersonalToolbar { -moz-box-ordinal-group:  2 !important; }
+#PersonalToolbar {
+  -moz-box-ordinal-group: 2 !important;
+}
 
-#titlebar { -moz-box-ordinal-group: 3 !important; }
+#titlebar {
+  -moz-box-ordinal-group: 3 !important;
+}
 
-/*  disable Tabs bar */
-#TabsToolbar { visibility: collapse !important; }
+#toolbar-menubar {
+  -moz-box-ordinal-group: 4 !important;
+}
 
-/*  Hide it when urlbar opend  */
-#navigator-toolbox #nav-bar[urlbar-exceeds-toolbar-bounds] > #nav-bar-overflow-button {
+/* Tabsbar */
+/* #TabsToolbar { visibility: collapse !important; } */
+
+/* give space to buttons form top to get down */
+#TabsToolbar {
+  /*   margin-right: 96px !important; */
+}
+
+.tabbrowser-tab,
+.tab-background {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* auto hide tabs bar */
+/* #TabsToolbar:not(:hover) { display: none;} */
+/* #TabsToolbar:not(:hover) { position:fixed; top: -34px; right: 40px;width: 100%} */
+/* #navigator-toolbox:focus-within:hover #TabsToolbar { display: block; } */
+/* #navigator-toolbox:not(:hover) #TabsToolbar { display: none; } */
+#navigator-toolbox #TabsToolbar {
+  display: none;
+}
+
+/* #TabsToolbar */
+/* END: Tabsbar */
+
+/* START: Navbar */
+/*  Hide 'more tools' button when urlbar focused  */
+/* #navigator-toolbox #nav-bar[urlbar-exceeds-toolbar-bounds] > #nav-bar-overflow-button {
   visibility: collapse !important;
 }
+ */
+/* Remove border below whole nav */
+#navigator-toolbox {
+  border-bottom: none !important;
+}
 
-/* Hide back, forward, reload and extensions button */
+#urlbar,
+#urlbar * {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* #urlbar-background {
+  border: red !important;
+} */
+#urlbar:hover {
+  background: none !important;
+}
+
+/* 
+#urlbar[focused="true"] > #urlbar-background,
+#urlbar:not([open]) > #urlbar-background {
+  background: red !important;
+} */
+/* #nav-bar:not(:hover) { margin-top: -29px !important;} */
+/* #nav-bar:focus-within { margin-top: 0px !important; } */
+/* #nav-bar { transition:0.50s margin-top ease-out !important; } */
+
 #back-button,
 #forward-button
 /* #unified-extensions-button */
 /* #PanelUI-menu-button */
-/*#reload-button*/ {
-/*   display: none !important; */
+/*#reload-button*/{
+  /*   display: none !important; */
   visibility: collapse !important;
 }
 
-/* Hide the extensions button */
-#unified-extensions-button, #unified-extensions-button > .toolbarbutton-icon{
-/* width: 0px !important; */
-/* padding: 0px !important; */
-  margin: 0 !important;
-  position: fixed;
-  top: 28px;
-  right: 32px;
-  background-color: #0a0a0a;
-}
-
-/* Workaround to hide panel menu button */
-#PanelUI-button {
-    position: fixed;
-    top: 28px;
-    right: 10px;
-  background-color: #050505;
-}
-#appMenu-notification-popup {visibility: visible !important;}
-#PanelUI-menu-button {
+toolbarbutton#PanelUI-menu-button.toolbarbutton-1 {
   padding: 0 !important;
 }
-
-/* Show dark shade under urlbar */
-#urlbar[open] {
-  background: #393532 !important;
-  box-shadow: 0 0 0 200vh #0000009f !important;
-}
-
-/* Autohide search bar */
-/* #main-window:not([customizing]) #navigator-toolbox:not(:focus-within) {
-  margin-top: -31px;
-}
- */
-/* Animatin showing/hidding search bar */
-#navigator-toolbox { transition:0.09s margin-top ease-out; }
 
 window,
 #main-window,
 #toolbar-menubar,
 #TabsToolbar,
 #PersonalToolbar,
-#navigator-toolbox,
-#sidebar-box,
-#nav-bar {
+#navigator-toolbox {
   -moz-appearance: none !important;
   border: none !important;
-  border: none !important;
   box-shadow: none !important;
-  background: #111 !important;
+}
+
+#nav-bar {
+  background: transparent !important;
+  ;
 }
 
 #nav-bar,
-  #nav-bar-customization-target,
-  #urlbar-container,
-  /* #urlbar, */
-  #nav-bar-overflow-button {
+#nav-bar-customization-target,
+#urlbar-container
+
+/* #urlbar, */
+  {
   padding-block: 0 !important;
   margin-block: 0 !important;
   padding: 0 !important;
-   margin: 0 !important;
-  max-height: 34px !important;
+  margin: 0 !important;
+  /*   max-height: 34px !important; */
   /* background:  #2d333b !important;*/
 }
 
-#urlbar {
-  padding-block: 0 !important;
-  margin-block: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#nav-bar {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-/* Remove border below whole nav */
-#navigator-toolbox {
-  border-bottom: none !important;
-}
-#urlbar-input-container {
-  border: none !important;
-  padding: 0 !important;
-}
-#urlbar,
-#urlbar * {
-  outline: none !important;
-/*   border: 1px solid red !important; */
-  border-bottom: none !important;
-  border-top: none !important;
-/*   box-shadow: none !important; */
-/*   background: transparent !important; */
-
-}
-
-#urlbar-background {
-  border: transparent !important;
-  background: transparent !important;
-}
-
-#urlbar[focused="true"] > #urlbar-background,
-#urlbar:not([open]) > #urlbar-background {
-  background: transparent !important;
-  /*   border-radius:  5px  !important; */
-
-}
-
-/* Sidebar themeing */
-
-#sidebar-splitter {
-  border: none !important;
-  background-color: #111111 !important;
+/* Show dark shade under urlbar */
+#urlbar[open] {
+  /*   background: red !important; */
+  box-shadow: 0 0 0 100vh #00000088 !important;
+  /*   padding: 0 6px !important; */
+  /*    position: absolute; */
+  /*     left: 4.1% !important; */
+  /*  top: 200% !important;
+  left: 2vw !important;
+  width: 100% !important; */
+  /*   right: 10px !important; */
+  /*   margin: 0 auto !important; */
+  width: 100.8vw !important;
+  /*   transition:0.10s height ease-in-out !important; */
 }
